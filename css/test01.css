@@ -1,0 +1,38 @@
+/* スタイル全般 */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* コンテナ設定 */
+.container {
+  display: flex;
+  gap: 100px; /* 各ボックス間のスペース */
+  padding: 600px;
+  background-color: #F2EDD6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ボックスの基本設定 
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+*/
+
+
