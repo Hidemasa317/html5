@@ -1,0 +1,22 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遷移先</title>
+</head>
+<body>
+
+    <div>
+        <button id="return" onclick="history.back" type="button">戻る</button>
+    </div>
+
+    <script>
+        // ボタンクリックで指定のファイルに遷移
+        document.getElementById("return").addEventListener("click", function() {
+            window.history.back.href ="#";
+            //window.location.href = "/Users/kawanahidemasa/Desktop/HTML:CSS課題05 最新/課題.html";
+        });
+    </script> 
+    
+</body>
+</html>
