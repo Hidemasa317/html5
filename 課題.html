@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉祥寺ノーブルカフェ - GRAND OPEN</title>
+
+    <!--↓　Googleフォント　-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/449d3c969e.js" crossorigin="anonymous"></script>
+
+    <!--Boot strap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        media="only screen and (max-width: 450px)" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        /* 全体の基本スタイル */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px 10px;
+            margin: 25px;
+            background-color: #F2EDD6;
+
+        }
+
+        .box {
+            display: flex;
+            height: auto;
+            width: 100vw;
+            font-family: Arial, sans-serif;
+            padding: 10px 10px;
+            margin: 0 auto;
+            background-color: #F2EDD6;
+            justify-content: space-around;
+            display: contents;
+
+            /* display: inline-flex; */
+            gap: 0;
+            /* 左右の間隔を調整  grid-template-columns: 1fr 50fr; */
+
+            background-color: #F2EDD6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+            /*ボーダー要素*/
+            /*border-top: 10px double black;
+            border-bottom: 10px double black;*/
+
+            position: relative;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -6px;
+                bottom: -6px;
+                left: -6px;
+                right: -6px;
+                border-top: 3px solid black;
+                border-bottom: 3px solid black;
+                pointer-events: none;
+            }
+        }
+
+        .right {
+            padding: 0;
+            max-height: 1000px;
+            padding-left: 10px;
+            max-width: 1000px;
+        }
+
+        .left {
+            padding: 10px 10px 0 0;
+            padding-bottom: 0;
+            height: 550px;
+
+        }
+
+        /*　                      サブタイトル　                      */
+        .subtitle {
+            max-width: 550px;
+            padding: 0 0 20px 0;
+            font-size: 10px;
+        }
+
+        /* 吉祥寺　*/
+        .kichijyou {
+            font-size: 20px;
+            font-family: "Abril Fatface", serif;
+            font-style: normal;
+        }
+
+        /* 9/1 */
+        .nineone {
+            font-size: 50px;
+            font-weight: 1px;
+            height: 300px;
+            font-family: "Abril Fatface", serif;
+            margin-left: 10px;
+        }
+
+        .i {
+            font-size: 10px;
+        }
+
+        /* Fontawesome */
+        .nineone::before {
+
+            font-family: "fa-solid";
+        }
+
+        /* ノーブルカフェ　*/
+        .nobleCaffe {
+            font-size: 30px;
+            font-weight: 100px;
+            font-family: "Abril Fatface", serif;
+
+        }
+
+        /* ｜　縦棒　*/
+        .border {
+            font-size: 35px;
+        }
+
+
+        /* SATを90度回転させる */
+        .rotate-90 {
+
+            display: inline-block;
+            /* 回転効果を適用するためにインラインブロックに */
+            transform: rotate(90deg);
+            font-size: 20px;
+            font-family: "Abril Fatface", serif;
+            font-style: normal;
+            padding-right: 10px;
+        }
+
+        /* 10/1 flex-direction: row;*/
+        .tenone {
+            font-size: 30px;
+            font-family: "Abril Fatface", serif;
+            font-style: normal;
+
+            padding-top: 10px;
+            vertical-align: top;
+        }
+
+        /* a.m. */
+        .AM {
+            height: 30px;
+            vertical-align: text-bottom;
+            padding-left: 40px;
+            font-family: "Abril Fatface", serif;
+            font-size: 25px;
+        }
+
+
+
+        .times {
+            float: right;
+        }
+
+        /* GRAND OPEN */
+        .title {
+
+            padding: 0 0 0 0;
+            max-width: 520px;
+            font-size: 75px;
+            font-family: "Abril Fatface", serif;
+            font-weight: 10;
+            font-style: normal;
+
+        }
+
+        /* レイアウトスタイル */
+
+        .left img {
+            /*    カフェ写真     */
+
+            height: 500px;
+            width: 330px;
+            margin-left: 30px;
+            padding-top: 20px;
+        }
+
+
+        .text-containe span {
+            /* strongをspanに　*/
+            font-size: 50px;
+            width: 10px;
+            height: 30px;
+        }
+
+        .right img {
+            /* カフェラテ画像　*/
+            height: 200px;
+            max-width: 1000px;
+            padding-bottom: 10px;
+        }
+
+        /* 詳細説明のスタイル */
+        .p {
+            font-size: 100px;
+            font-family: "Abril Fatface", serif;
+            font-weight: 0;
+            width: 10px;
+        }
+
+        /* ーーーーーーーーーーーーー　　　カフェ説明　　　　ーーーーーーーーーーーーーーーー*/
+        .content-container {
+            display: flex;
+            align-items: center;
+            /*縦方向の中央揃え */
+            gap: 3px;
+            /* テキストと画像の間隔 */
+            max-height: 200px;
+            max-width: 545px;
+            margin: 0;
+            /* 中央寄せ 元：20px auto */
+            background-color: #F2EDD6;
+            border-top: 1px solid black;
+        }
+
+        .content-container p {
+            clear: left;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            margin: 0;
+            padding: 0 0 0 0;
+
+            font-size: 16.5px;
+
+            max-height: 140px;
+            max-width: 530px;
+            padding-left: 10px;
+        }
+
+        .bigLetter {
+            /* N */
+
+            float: left;
+            height: 50px;
+            width: 35px;
+
+            font-size: 49px;
+        }
+
+        /* 右・下部　　　　　　ーーーーーーーーーーinfo全体のスタイル */
+        .info-container {
+            display: flex;
+
+            /* 縦方向の中央揃え */
+            gap: 5px;
+            /* 各要素の間隔 */
+            padding: 0 10px 0 10px;
+            padding-left: 0;
+            border-top: 1px solid black;
+            background-color: #F2EDD6;
+            max-width: 560px;
+            max-height: 170px;
+            margin: 0 0 10px 10px;
+            /* 中央寄せ */
+
+            /* 住所のフォント　*/
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: black;
+            size: 10px;
+        }
+
+        .info-container a {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+
+        .info-container a:hover {
+            text-decoration: underline;
+        }
+
+        .address-content .information p {
+            font-size: 10px;
+            max-width: 30px;
+        }
+
+        .information {
+            font-family: "Dancing Script", serif;
+            font-style: normal;
+            font-size: 35px;
+            display: inline-block;
+            /* 回転効果を適用するためにインラインブロックに */
+            transform: rotate(-5deg);
+            padding: 0 0 10px 0;
+        }
+
+        .yuubinn {
+            border-left: 1px solid black;
+            padding: 0 0 10px 10px;
+        }
+
+        .cake-content img {
+            /* ケーキ画像　*/
+            height: 180px;
+            width: 170px;
+            margin: 0;
+        }
+
+        .logo-content img {
+            /* Nロゴ */
+            height: 150px;
+            width: 150px;
+            padding: 10px 0 0 30px;
+        }
+
+        .address-content {
+            font-family: "Georgia", serif;
+            color: black;
+
+        }
+
+        .address-content p {
+            margin: 0;
+        }
+
+        /*ーーーーーーーーーメディアクエリーーーーーーーーーー*/
+        .newtitle {
+            max-height: 100px;
+        }
+
+        .newlogo-content img {
+            /*  Nロゴ  */
+            padding: 0;
+            color: black;
+            max-width: 170px;
+            max-height: 170px;
+
+        }
+
+        .newcontent-container {
+            display: flex;
+            max-height: 105px;
+        }
+
+        .newcontent-container p {
+            clear: left;
+        }
+
+        /* N */
+        .newLetter {
+            display: flex;
+            float: left;
+            height: 40px;
+            width: 35px;
+            font-size: 35px;
+            gap: 0;
+            margin-left: 0;
+            font-size: 40px;
+        }
+
+        .newNoble {
+            /* 新カフェ説明　*/
+
+            display: flex;
+            /* align-items: center; */
+            /*縦方向の中央揃え */
+
+            float: right;
+            font-family: "Playfair Display", serif;
+            font-weight: weight;
+            float: right;
+            font-size: 12px;
+            max-height: 150px;
+
+
+            border-left: 1px solid black;
+            padding: 10px;
+
+        }
+
+        .newNoble p {
+            clear: left;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .thirdCoffeeImage img {
+            display: flex;
+            float: right;
+            max-width: 100px;
+            max-height: 90px;
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+
+
+        /* 新住所　*/
+        .newaddress-content {
+            max-height: 150px;
+
+            padding-left: 70px;
+        }
+
+        .newYuubinn {
+            display: inline;
+            flex-direction: column;
+            border-left: 1px solid black;
+            font-family: "Georgia", serif;
+            color: black;
+            margin: 0 auto;
+            font-size: 12px;
+            max-width: 230px;
+            padding: 10px;
+        }
+
+
+
+        /* 新住所内リンク */
+        .newYuubinn a {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+
+        .newYuubinn a:hover {
+            text-decoration: underline;
+        }
+
+        .newYuubinn p {
+            margin: 0;
+        }
+
+        /*            */
+
+
+        .newinfo-container {
+            display: flex;
+            align-items: center;
+            /* 縦方向の中央揃え */
+            gap: 5px;
+            /* 各要素の間隔 */
+            padding: 0 10px 0 10px;
+            padding-left: 0;
+            border-top: 1px solid black;
+            background-color: #F2EDD6;
+            max-width: 560px;
+            max-height: 170px;
+            margin: 0 0 0 10px;
+            /* 中央寄せ */
+
+            /* 住所のフォント　*/
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: black;
+            size: 10px;
+        }
+
+        /* メディアクエリ設定 */
+
+        /* 幅1500pxで画面いっぱいに表示される　*/
+        @media screen and (min-width: 1500px) {
+            .times {
+                display: none;
+            }
+
+            .card {
+                display: none;
+            }
+
+            .box {
+                display: inline-flex;
+                margin: 0 auto;
+                gap: 0;
+                padding: 0;
+                max-width: 1500px;
+            }
+
+            .left img {
+                height: 500px;
+                width: 500px;
+                margin-left: 30px;
+            }
+
+            .newLeft {
+                display: none;
+            }
+
+            body {
+                display: inline-flex;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .newImage {
+                /* 新画像三つ　*/
+                display: none;
+            }
+
+            .newNoble {
+                /*新カフェ説明　*/
+                display: none;
+            }
+
+            .newYuubinn {
+                /* 新住所　*/
+                display: none;
+            }
+
+            .newaddress-content {
+                display: none;
+            }
+
+            .newlogo-content {
+                display: none;
+            }
+
+            .thirdCoffeeImage {
+                display: none;
+            }
+
+            .newinfo-container {
+                display: none;
+            }
+
+            .newcake-content {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+            .times {
+                display: none;
+            }
+
+            .card {
+                display: none;
+            }
+
+            .box {
+                display: inline-flex;
+                margin: 0 auto;
+                gap: 0;
+                padding: 0;
+                max-width: 1500px;
+            }
+
+            .left img {
+                height: 500px;
+                width: 500px;
+                margin-left: 30px;
+            }
+
+            .newLeft {
+                display: none;
+            }
+
+            body {
+                display: inline-flex;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .newImage {
+                /* 新画像三つ　*/
+                display: none;
+            }
+
+            .newNoble {
+                /*新カフェ説明　*/
+                display: none;
+            }
+
+            .newYuubinn {
+                /* 新住所　*/
+                display: none;
+
+            }
+
+            .newaddress-content {
+                display: none;
+            }
+
+            .newlogo-content {
+                display: none;
+            }
+
+            .thirdCoffeeImage {
+                display: none;
+            }
+
+            .newinfo-container {
+                display: none;
+            }
+
+            .newcake-content {
+                display: none;
+            }
+
+        }
+
+
+        /* 1050px以下は画像２を表示　*/
+        @media screen and (max-width: 1050px) {
+
+            .nowTime {
+                display: inline-flex;
+            }
+
+            .times {
+                display: none;
+            }
+
+
+            .card {
+                display: none;
+            }
+
+            .newLeft {
+                display: none;
+            }
+
+            .box {
+                justify-content: space-around;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            .newtitle {
+                /* GRAND OPEN */
+                display: inline-flex;
+                gap: 60px;
+
+            }
+
+            .newlogo-content {
+                /* Nロゴ　*/
+                display: flex;
+                float: right;
+            }
+
+            .newImage {
+                /* 画像三つ　*/
+                display: inline;
+                flex-direction: row;
+                gap: 30px;
+
+            }
+
+            .newNoble {
+                /* カフェ説明　*/
+                display: flex;
+                float: left;
+            }
+
+            .newaddress-content {
+                display: flex;
+
+            }
+
+            .newYuubinn {
+                display: flex;
+
+            }
+
+            .content-container {
+                display: none;
+            }
+
+            .info-container {
+                display: none;
+            }
+
+            .left {
+                display: none;
+            }
+
+            .right {
+                max-width: 1000px;
+            }
+
+            .logo-content img {
+                /* 既存N画像　一応消す　*/
+                display: none;
+            }
+
+            .image-content img {
+                /* 既存カフェラテ画像　*/
+                display: none;
+            }
+
+            .cake-content img {
+                /* 既存ケーキ画像　*/
+                display: none;
+            }
+
+            .left img {
+                /* 既存カフェ画像　*/
+                display: none;
+            }
+
+            .information {
+                /* informationフォント文字（消去） */
+                display: none;
+            }
+
+            .yuubinn {
+                display: none;
+            }
+
+            .thirdCoffeeImage {
+                display: none;
+            }
+        }
+
+
+        @media screen and (min-width:451px) and (max-width: 1050px) {
+            .nowTime {
+                display: none;
+            }
+
+            .card {
+                display: none;
+            }
+
+            html {
+                display: block;
+            }
+
+            body {
+                display: block;
+            }
+        }
+
+
+
+        @media screen and (max-width:450px) {
+            .nowTime {
+                display: none;
+            }
+
+            .card {
+                display: block;
+            }
+
+            .body {
+                display: none;
+            }
+
+            .box {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="left">
+            <img src="./image/Noble.jpg" alt="カフェの写真">
+        </div>
+
+
+        <div class="right">
+
+            <!-- ヘッダー部分 -->
+            <div class="newtitle">
+                <div class="title"> GRAND OPEN</div>
+                <a href="./遷移先フォルダ/ロゴ遷移先.html"><span class="newlogo-content"><img src="./image/logo.png"
+                            alt="Nロゴ"></span>
+            </div></a>
+
+            <h1 class="subtitle">
+
+
+                <span class="times">
+                    <div class="tenone">10:00 </div>
+                    <div class="AM">a.m.</div>
+                </span>
+
+                <span class="kichijyou">吉祥寺
+                </span>
+
+                <strong class="nobleCaffe">ノーブルカフェ <strong class="border">|</strong>
+                </strong>
+
+                <span class="nineone">
+                    <i class="fa-solid">
+                        <i class="fa-solid fa-bounce">9</i>/1 <!--fa-mug-hot-->
+                    </i>
+
+                </span>
+                <span class="rotate-90">SAT</span>
+
+               <!-- <script class="nowTime">
+                    const today = new Date();
+                    const newyear = new Date(2024, 0, 1);
+                    //if (window.matchMedia('(max-width: 1050px)').matches) { 
+                    document.write(
+                        `<span style="font-size: 30px; font-family: "Abril Fatface", serif;">`
+                        + today.getHours(11)
+                        + ":"
+                        + today.getMinutes(30)
+                        + "."
+                        + "</span>");
+                </script>-->
+                <script class="nowTime">
+                    const today = new Date();
+                    const newyear = new Date(2024, 0, 1);
+                
+                    // 現在の時間と分を取得
+                    const hours = today.getHours(); // 時間（24時間形式）
+                    const minutes = today.getMinutes(); // 分
+                
+                    // AM/PMを判定
+                    const period = hours < 12 ? "a.m" : "p.m";
+                
+                    // 12時間形式に変換
+                    const displayHours = hours % 12 || 12; // 0を12に変換
+                
+                    // 現在の時間を表示
+                    document.write(
+                        `<span style="font-size: 25px; font-family: 'Abril Fatface', serif;">`
+                        + displayHours
+                        + ":"
+                        + (minutes < 10 ? "0" + minutes : minutes) // 1桁の分にゼロを付ける
+                        + " " + period
+                        + "."
+                        + "</span>"
+                    );
+                </script>
+                
+            </h1>
+
+
+            <!-- メインコンテンツ -->
+            <div class="container">
+                <div class="content-container">
+                    <p><span class="bigLetter">N</span>
+                        obleをテーマに気品と落ち着きを感じるカフェが誕生しました。当店自慢の深い味わいと香りが特徴のコーヒーは、厳選されたコーヒー豆で淹れたこだわりの一杯です。是非、お楽しみください。
+                    </p>
+                    <div class="image-content">
+                        <img src="./image/coffe.png" alt="カフェラテ画像">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--   追加要素一覧　　 class="newimage"-->
+            <div>
+                <div>
+                    <div class="newImage"><img id="coffeeimage" src="./image/newcoffe.png" alt="新カフェラテ画像"></div>
+                    <div class="newImage"><img id="cakeimage" src="./image/newcake.png" alt="新ケーキ画像"></div>
+                    <div class="newImage"><img src="./image/newNoble.png" alt="新カフェ画像"></div>
+                </div>
+
+                <div class="newNoble">
+                    <p><span class="newLetter">N</span>
+                        obleをテーマに気品と落ち着きを感じるカフェが誕生しました。当店自慢の深い味わいと香りが特徴のコーヒーは、厳選されたコーヒー豆で淹れたこだわりの一杯です。是非、お楽しみください。
+                    </p>
+                    <div class="thirdCoffeeImage">
+                        <img src="./image/450coffe.png" alt="450以下カフェラテ画像">
+                    </div>
+
+                    <p class="newaddress-content">
+                    <address class="newYuubinn">
+                        <p>〒180-123X</p>
+                        <p>東京都武蔵野市吉祥寺南町一丁目1-12X</p>
+                        <p>TEL 03-123-456X</p>
+                        <p><a href="https://www.noblecafe_kichijoji.jp" target="_blank">www.noblecafe_kichijoji.jp</a>
+                        </p>
+                    </address>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="info-container">
+                <!-- 左側のケーキ画像 -->
+                <div class="cake-content">
+                    <img src="./image/cake.png" alt="ケーキ画像">
+                </div>
+                <!-- 住所などのテキスト -->
+                <div class="address-content">
+                    <p class="information">information</p>
+
+                    <address class="yuubinn">
+                        <p>〒180-123X</p>
+                        <p>東京都武蔵野市吉祥寺</p>
+                        <p>南町一丁目1-12X</p>
+                        <p>TEL 03-123-456X</p>
+                        <p><a href="https://www.noblecafe_kichijoji.jp" target="_blank">www.noblecafe_kichijoji.jp</a>
+                        </p>
+                    </address>
+
+                </div>
+                <!-- 右側のロゴ画像 -->
+
+                <div class="logo-content">
+                    <a href="./遷移先フォルダ/ロゴ遷移先.html"><img class="btn" src="./image/logo.png" alt="Nロゴ画像"></a>
+                </div>
+            </div>
+
+            <div class="newLeft">
+                <img class="btn" src="./image/Noble.jpg" alt="カフェの写真">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--bootstrap-->
+    <div class="card bg-warning bg-gradient" style="width: 100vw;">
+
+        <div class="card-body">
+            <h2 class="card-header">GRAND OPEN</h2>
+            <p class="card-text">吉祥寺ノーブルカフェ|9/1SAT 10:00a.m.</p>
+
+
+            <hr class="bg-dark m-1"><!--罫線-->
+            <div class="m-1 bg-warning" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="card-body bg-warning" style="padding: 0;">
+                        <div class="bg-warning" style="display: flex;">
+                            <div class="card-text">
+                                Nobleをテーマに気品と落ち着きを感じるカフェが誕生しました。当店自慢の深い味わいと香りが特徴のコーヒーは、厳選されたコーヒー豆で淹れたこだわりの一杯です。是非、お楽しみください。
+                            </div>
+                            <img src="./image/coffe.png" style="height:20vw; width: 20vw;" alt="カフェラテ画像">
+                        </div>
+                    </div>
+                </div>
+                <hr class="bg-dark m-1"><!--罫線-->
+                <div class="row g-0">
+                    <div class="card-body bg-warning" style="padding: 0;">
+                        <div class=" bg-warning" style="display: flex;"> <!--col-md-9-->
+                            <img class="p-2" style="height:23vw; width: 20vw; flex-direction: row;"
+                                src="./image/cake.png" alt="ケーキ画像">
+                            <div class="card-text" style="width: 50vw;">
+                                <p class="m-0">information</p>
+                                <p class="m-0">〒180-123X</p>
+                                <p class="m-0">東京都武蔵野市吉祥寺</p>
+                                <p class="m-0">南町一丁目1-12X</p>
+                                <p class="m-0">TEL 03-123-456X</p>
+                                <p class="m-0"><a href="https://www.noblecafe_kichijoji.jp"
+                                        target="_blank">www.noblecafe_kichijoji.jp</a></p>
+                            </div>
+                            <a href="./遷移先フォルダ/ロゴ遷移先.html"><img class="btn  btn-sm"
+                                    style="height:21vw; width: 22vw; flex-direction: row;" src="./image/logo.png"
+                                    alt="Nロゴ画像"><!--btn-outline-secondary-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="./image/Noble.jpg" class="bg-warning m-1" style="height:70vw; width: 70vw;" alt="カフェ写真">
+            </div>
+        </div>
+
+
+        <script src="./Javascript/move.js"></script>
+        <script src="./遷移先フォルダ/ロゴ遷移先.html"></script>
+
+</body>
+
+</html>
